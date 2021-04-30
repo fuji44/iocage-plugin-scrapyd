@@ -1,0 +1,21 @@
+#!/bin/sh
+# PROVIDE: scrapyd
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="scrapyd"
+rcvar="scrapyd_enable"
+load_rc_config $name
+
+: ${scrapyd_enable:="NO"}
+: ${scrapyd_app_dir:="/usr/local/scrapyd"}
+: ${scrapyd_user:="scrapy"}
+
+required_dirs="$scrapyd_app_dir"
+procname="$scrapyd_app_dir/bin/python3.9"
+command="/usr/sbin/daemon"
+command_args="-f $scrapyd_app_dir/bin/scrapyd --rundir=$scrapyd_app_dir --pidfile=$scrapyd_app_dir/scrapyd.pid"
+
+run_rc_command "$1"
