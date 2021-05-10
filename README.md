@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-sudo iocage fetch -P scrapyd -n scrapyd -g https://github.com/fuji44/iocage-fuji44-plugins.git --branch main ip4_addr="em0|192.168.0.100/24"
+sudo iocage fetch -P scrapyd -n scrapyd -g https://github.com/fuji44/iocage-fuji44-plugins.git ip4_addr="em0|192.168.0.100/24"
 ```
 
 ## Usage
