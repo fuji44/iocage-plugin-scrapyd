@@ -1,9 +1,12 @@
 #!/bin/sh
 
+# Install Python 3.11
+pkg update -f && pkg install -f python311
+
 # Install scrapyd
 : ${scrapyd_app_dir="/usr/local/scrapyd"}
-/usr/local/bin/python3.9 -m venv $scrapyd_app_dir
-$scrapyd_app_dir/bin/python3.9 -m pip install --upgrade pip
+/usr/local/bin/python3.11 -m venv $scrapyd_app_dir
+$scrapyd_app_dir/bin/python3.11 -m pip install --upgrade pip
 $scrapyd_app_dir/bin/pip install scrapyd
 
 # Create run user

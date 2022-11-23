@@ -14,7 +14,7 @@ load_rc_config $name
 : ${scrapyd_user:="scrapy"}
 
 required_dirs="$scrapyd_app_dir"
-procname="$scrapyd_app_dir/bin/python3.9"
+procname="$scrapyd_app_dir/bin/python3"
 command="/usr/sbin/daemon"
 command_args="-o /tmp/scrapyd.log $scrapyd_app_dir/bin/scrapyd --rundir=$scrapyd_app_dir --pidfile=$scrapyd_app_dir/scrapyd.pid"
 
