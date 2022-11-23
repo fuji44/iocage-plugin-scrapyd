@@ -2,7 +2,7 @@
 
 # Install scrapyd
 : ${scrapyd_app_dir="/usr/local/scrapyd"}
-/usr/local/bin/python3 -m venv $scrapyd_app_dir
+/usr/local/bin/python3.11 -m venv $scrapyd_app_dir
 $scrapyd_app_dir/bin/python3 -m pip install --upgrade pip
 $scrapyd_app_dir/bin/pip install scrapyd
 
